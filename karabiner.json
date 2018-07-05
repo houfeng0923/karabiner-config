@@ -69,7 +69,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "home"
+                                        "key_code": "left_arrow",
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -88,7 +89,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "end"
+                                        "key_code": "right_arrow",
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -335,7 +337,7 @@
                         ]
                     },
                     {
-                        "description": "SpaceFN: Space+u to Home, Space+o to End",
+                        "description": "SpaceFN: Space+h to Home, Space+n to End",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -346,7 +348,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "h",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -369,7 +371,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "n",
                                     "modifiers": {
                                         "optional": [
                                             "any"
