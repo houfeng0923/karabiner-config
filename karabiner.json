@@ -745,10 +745,9 @@
                         ]
                     },
                     {
-                        "description": "Launch apps by spaceFn+letters.",
+                        "description": "Launch apps by spaceFn+letters(custom)",
                         "manipulators": [
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -775,7 +774,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -802,7 +800,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -829,7 +826,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -856,7 +852,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -883,7 +878,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -910,7 +904,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -937,7 +930,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -964,7 +956,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -991,7 +982,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -1018,7 +1008,6 @@
                                 "type": "basic"
                             },
                             {
-
                                 "conditions": [
                                     {
                                         "name": "spacefn_mode",
@@ -1040,6 +1029,44 @@
                                     },
                                     {
                                         "key_code": "w"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change right_shift to cmd+k if pressed alone in VSCode(custom)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com\\.microsoft\\.VSCode",
+                                            "com\\.microsoft\\.VSCodeInsiders"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "k",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
