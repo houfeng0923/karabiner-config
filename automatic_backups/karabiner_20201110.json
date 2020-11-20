@@ -378,27 +378,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Map right_control + Backspace to Forward Delete",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "delete_or_backspace",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_forward"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -445,6 +424,14 @@
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
                     "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": {
+                                "key_code": "fn"
+                            }
+                        },
                         {
                             "from": {
                                 "key_code": "insert"
